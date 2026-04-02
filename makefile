@@ -6,5 +6,5 @@ clean:
 
 imagep: image_pthread.c image.h
 	gcc -g -o imagep image_pthread.c -lpthread -lm
-imgaeopen: image_openmp.c image.h
+imageopen: image_openmp.c image.h
 	gcc -g -Wall -fopenmp -o imageopen image_openmp.c -lm
