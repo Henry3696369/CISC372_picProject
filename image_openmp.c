@@ -9,6 +9,7 @@
 
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
+#include <omp.h>
 
 //An array of kernel matrices to be used for image convolution.  
 //The indexes of these match the enumeration from the header file. ie. algorithms[BLUR] returns the kernel corresponding to a box blur.
@@ -59,6 +60,7 @@ uint8_t getPixelValue(Image* srcImage,int x,int y,int bit,Matrix algorithm){
 void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
     int row,pix,bit,span;
     span=srcImage->bpp*srcImage->bpp;
+#pragma omp parallel for collapse(3) schedule(static,3)
     for (row=0;row<srcImage->height;row++){
         for (pix=0;pix<srcImage->width;pix++){
             for (bit=0;bit<srcImage->bpp;bit++){
