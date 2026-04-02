@@ -11,11 +11,14 @@
 #include "stb_image_write.h"
 #include <omp.h>
 
-int thread_count;
+int thread_count = 4;
+/***
 void get_count(int* count_ptr) {
     printf("Enter the number of threads you want to create: ");
     scanf("%d", count_ptr); 
 }
+    for conveinence, I just choose 4 threads.
+***/ 
 
 //An array of kernel matrices to be used for image convolution.  
 //The indexes of these match the enumeration from the header file. ie. algorithms[BLUR] returns the kernel corresponding to a box blur.
@@ -98,7 +101,6 @@ enum KernelTypes GetKernelType(char* type){
 //main:
 //argv is expected to take 2 arguments.  First is the source file name (can be jpg, png, bmp, tga).  Second is the lower case name of the algorithm.
 int main(int argc,char** argv){
-    get_count(&thread_count);
     long t1,t2;
     t1=time(NULL);
 

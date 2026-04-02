@@ -22,11 +22,15 @@ Matrix algorithms[]={
     {{0,0,0},{0,1,0},{0,0,0}}
 };
 
-int thread_count;
+int thread_count = 4;
+/***
 void get_count(int* count_ptr) {
     printf("Enter the number of threads you want to create: ");
     scanf("%d", count_ptr); 
 }
+    for conveinence, I just choose 4 threads.
+***/ 
+
 
 // A new struct for passing pthread parameter;
 typedef struct {
@@ -122,7 +126,6 @@ enum KernelTypes GetKernelType(char* type){
 //argv is expected to take 2 arguments.  First is the source file name (can be jpg, png, bmp, tga).  Second is the lower case name of the algorithm.
 int main(int argc,char** argv){
     pthread_t* thread_handles;
-    get_count(&thread_count);
     thread_handles = (pthread_t*)malloc(thread_count * sizeof(pthread_t));
     long t1,t2;
     t1=time(NULL);
