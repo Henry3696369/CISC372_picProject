@@ -1,0 +1,9 @@
+Script started on 2026-04-01 21:39:52-04:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="118" LINES="28"]
+hengluo@cisc372:~/cisc372/CISC372_picProject$ ./imagep pic3.jpg edge
+Took 16 seconds
+hengluo@cisc372:~/cisc372/CISC372_picProject$ ./imageopen pic3.jpg edge
+Took 16 seconds
+hengluo@cisc372:~/cisc372/CISC372_picProject$ exit
+exit
+
+Script done on 2026-04-01 21:40:50-04:00 [COMMAND_EXIT_CODE="0"]
