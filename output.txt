@@ -1,0 +1,9 @@
+Script started on Tue Apr  7 15:07:41 2026
+]0;hengluo@r1n11.darwin:~/CISC372_picProject[?1034h[hengluo@r1n11 CISC372_picProject]$ srun ./imagep pic1.jpg edge
+Took 6 seconds
+]0;hengluo@r1n11.darwin:~/CISC372_picProject[hengluo@r1n11 CISC372_picProject]$ srun ./imageopen pic1.jpg edge
+Took 6 seconds
+]0;hengluo@r1n11.darwin:~/CISC372_picProject[hengluo@r1n11 CISC372_picProject]$ exit
+exit
+
+Script done on Tue Apr  7 15:08:52 2026
